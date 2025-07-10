@@ -1,0 +1,12 @@
+<div class="continer">
+    <section class="search">
+      <app-country-search-input
+       placeholder="Buscar por pais"
+       (value)="Onchange($event)"
+      ></app-country-search-input>
+
+    </section>
+    <section class="table">
+       <app-table-country></app-table-country>
+    </section>
+</div>
