@@ -10,7 +10,7 @@
        @for (item of routes; track item.path) {
 
        <li>
-         <a href="{{item.path}}" class="flex items-center" [routerLink]="item.path"  routerLinkActive="text-blue-500 font-bold">
+         <a class="flex items-center" [routerLink]="item.path" routerLinkActive="text-blue-500 font-bold">
            <span [innerHTML]="item.icon"></span>
            {{item.label}}
          </a>

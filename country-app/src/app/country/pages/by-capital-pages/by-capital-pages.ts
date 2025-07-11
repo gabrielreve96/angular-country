@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CountrySearchInput } from '../../component/country-search-input/country-search-input';
 import { TableCountry } from '../../component/table-country/table-country';
-
+import { CountryService } from '../../services/countryServices';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-by-capital-pages',
   imports: [CountrySearchInput , TableCountry],
@@ -9,10 +10,19 @@ import { TableCountry } from '../../component/table-country/table-country';
   styleUrl: './by-capital-pages.css'
 })
 export class ByCapitalPages {
+serviceCountry = inject(CountryService)
+
+
+
  
 
 
-  Onchange(busuqeda:string){
-   console.log(busuqeda)
+
+  async Onchange(query:string){
+   return this.serviceCountry.serachByCapital(query).subscribe(
+    (res)=>{
+      console.log(res)
+    }
+   )
   }
 }
