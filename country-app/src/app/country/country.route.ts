@@ -3,7 +3,8 @@ import { ByCapitalPages } from "./pages/by-capital-pages/by-capital-pages";
 import { CountryLayout } from "./layouts/country-layout/country-layout";
 import { ByCountryPages } from "./pages/by-country-pages/by-country-pages";
 import { ByRegionPages } from "./pages/by-region-pages/by-region-pages";
-import { CountryPageComponent } from "./pages/country-page-component/country-page-component";
+import { CountryPagesComponent } from "./pages/country-pages-component/country-pages-component";
+
 
  const countryRoutes:Routes = [
      {
@@ -27,7 +28,7 @@ import { CountryPageComponent } from "./pages/country-page-component/country-pag
 
             {
                 path:"by/:codigo",
-                component:CountryPageComponent
+                component:CountryPagesComponent
             },
              {
                 path:"**",

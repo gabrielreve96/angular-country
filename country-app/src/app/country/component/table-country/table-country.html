@@ -1,21 +1,39 @@
-    <table class="table table-md mt-2 w-full">
-            <thead class="">
-                <tr>
-                    <th>#</th>
-                    <th>Icono</th>
-                    <th>Bandera</th>
-                    <th>Capital</th>
-                    <th>Nombre</th>
-                    <th>Poblacion</th>
-                    <th></th>
-                </tr>
-            </thead>
+<table class="table table-md mt-2 w-full">
+    <thead class="">
+        <tr>
+            <th>#</th>
+            <th>Icono</th>
+            <th>Bandera</th>
+            <th>Capital</th>
+            <th>Nombre</th>
+            <th>Poblacion</th>
+            <th></th>
+        </tr>
+    </thead>
 
-            <tbody>
+    <tbody>
 
-                 <tr></tr>
-                 
-            </tbody>
+        @for (item of Datacountri() ;track item.caa2; let i = $index) {
+        <tr class="hover:bg-amber-600 border-b border-gray-200">
+            <td class="px-4 py-2 font-medium text-gray-700">{{ i + 1 }}</td>
+            <td class="px-4 py-2">
+                <!-- Aquí podrías poner un ícono representativo -->
+                <img [src]="item.flags" alt="icono" class="h-6 w-6" />
+            </td>
+            <td class="px-4 py-2">
+                <img [src]="item.flags" [alt]="item.name" class="h-6 w-10 object-cover rounded-sm" />
+            </td>
+            <td class="px-4 py-2">{{ item.capital }}</td>
+            <td class="px-4 py-2">{{ item.lenguajeEsp }}</td>
+            <td class="px-4 py-2">{{ item.population }}</td>
+            <td class="px-4 py-2" class="text-amber-700 cursor-pointer "  (click)="paisdetalle(item.name)" >Mas informacion</td>
+
+        </tr>
 
 
-        </table>
+
+        }
+    </tbody>
+
+
+</table>

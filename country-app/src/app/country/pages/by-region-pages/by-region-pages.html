@@ -1,4 +1,4 @@
-<div class="container">
+
     <section>
          <app-country-search-input
         (value)="onChengue($event)"
@@ -6,6 +6,8 @@
          ></app-country-search-input>
     </section>
     <section>
-         <app-table-country></app-table-country>
+         <app-table-country
+         [Datacountri]="countries()"
+         
+         ></app-table-country>
     </section>
-</div>

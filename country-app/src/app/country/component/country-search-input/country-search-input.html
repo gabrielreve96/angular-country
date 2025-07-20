@@ -2,5 +2,8 @@
             <legend class="fieldset-legend">Que capital buscas?</legend>
             <input type="text" class="input" [placeholder]="placeholder()"
                 (keyup.enter)="value.emit(textValue.value)" #textValue />
-            <button class="btn btn-soft btn-accent w-50" (click)="value.emit(textValue.value)">Bsucar</button>
+            <button class="btn btn-soft btn-accent w-50" (click)="value.emit(textValue.value)">Bsucar</button> 
+            @if (isLoading()) {
+             <span class="loading loading-ring loading-xl"></span>
+            }
 </fieldset>

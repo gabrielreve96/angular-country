@@ -9,7 +9,7 @@ import { Component, input, output } from '@angular/core';
 export class CountrySearchInput {
   placeholder = input()
   value = output<string>()
-  
+   isLoading = input<boolean>()
 
 
 

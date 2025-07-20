@@ -1,0 +1,8 @@
+<p>country-pages-component works!   {{params}}</p>
+
+ @for (item of pais(); track $index) {
+      <li>
+         {{item.name}}
+        <img [src]="item.flags" [alt]="item.name" class="h-6 w-10 object-cover rounded-sm" />
+      </li>
+ }
